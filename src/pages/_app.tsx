@@ -1,8 +1,13 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Wallet from "../components/wallet/Wallet";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Wallet>
+      <Component {...pageProps} />
+    </Wallet>
+  );
 }
 
-export default MyApp
+export default MyApp;
